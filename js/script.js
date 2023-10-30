@@ -1,3 +1,4 @@
+/* eslint-disable no-invalid-this */
 /* eslint-disable require-jsdoc */
 /**
  * The following code is to calculate the price
@@ -32,6 +33,8 @@ const black = $('#black');
 const red = $('#red');
 const grey = $('#grey');
 
+const colorMessage = $('#colorMessage');
+
 const thumb1 = $('#thumb1');
 const thumb2 = $('#thumb2');
 const thumb3 = $('#thumb3');
@@ -53,16 +56,19 @@ function changeImagesColor( event ) {
     thumb1.attr('src', 'product-images/t-shirt-black-no-model.jpg');
     thumb2.attr('src', 'product-images/t-shirt-black-front.jpg');
     thumb3.attr('src', 'product-images/t-shirt-black-back.jpg');
+    colorMessage.text('Black');
   } else if (red.is(':checked')) {
     mainImage.attr('src', 'product-images/t-shirt-red-' + mainImageView);
     thumb1.attr('src', 'product-images/t-shirt-red-no-model.jpg');
     thumb2.attr('src', 'product-images/t-shirt-red-front.jpg');
     thumb3.attr('src', 'product-images/t-shirt-red-back.jpg');
+    colorMessage.text('Red');
   } else if (grey.is(':checked')) {
     mainImage.attr('src', 'product-images/t-shirt-grey-' + mainImageView);
     thumb1.attr('src', 'product-images/t-shirt-grey-no-model.jpg');
     thumb2.attr('src', 'product-images/t-shirt-grey-front.jpg');
     thumb3.attr('src', 'product-images/t-shirt-grey-back.jpg');
+    colorMessage.text('Grey');
   }
 
   console.log(mainImage.attr('src'));
@@ -80,3 +86,25 @@ grey.on('change', changeImagesColor);
 thumb1.on('click', changeMainImage);
 thumb2.on('click', changeMainImage);
 thumb3.on('click', changeMainImage);
+
+/**
+ * The following code handles the size selctions
+ */
+
+
+const sizeRadios = $('input:radio[name="size"]');
+
+const displaySize = $('#displaySize');
+
+const submitButton = $('#submit');
+
+function changeSize(event) {
+  const selectedSize = $(this).val();
+
+  displaySize.text(selectedSize);
+
+  submitButton.prop('disabled', false);
+  submitButton.text('Add to Cart');
+}
+
+sizeRadios.on('change', changeSize);
