@@ -12,6 +12,7 @@ const userQuantity = $('#quantity');
 const price = 20;
 const total = userQuantity.val() * price;
 
+let returnedQuantity = 1;
 
 displayPrice.text(price + '.00');
 displayTotal.text(total + '.00');
@@ -20,7 +21,15 @@ function calculateTotal( event ) {
   const quantity = event.target.value;
   const total = quantity * price;
 
-  displayTotal.text(total + '.00');
+  if (quantity >= 1) {
+    displayTotal.text(total + '.00');
+    submitButton.prop('disabled', false);
+  } else {
+    displayTotal.text('n o p e');
+    submitButton.prop('disabled', true);
+    submitButton.text('Buy more shirts');
+  }
+  returnedQuantity = quantity;
 }
 userQuantity.on('change', calculateTotal);
 
@@ -103,7 +112,10 @@ function changeSize(event) {
 
   displaySize.text(selectedSize);
 
-  submitButton.prop('disabled', false);
+  if (returnedQuantity >= 1) {
+    submitButton.prop('disabled', false);
+  }
+
   submitButton.text('Add to Cart');
 }
 
