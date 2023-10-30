@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link type="text/css" rel="stylesheet" href="css/styles.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="text/javascript" src="js/materialize.min.js" defer></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+    <script src="js/script.js" defer></script>
+	</head>
+
+	<body>
+		<main>
+			<section>
+				<form class="store__form">
+					<div class="form__images">
+						<img src="product-images/t-shirt-black-no-model.jpg" class="main__image" id="mainImage" />
+						<div class="sub__images" id="subImages">
+							<img src="product-images/t-shirt-black-no-model.jpg" class="sub__image" id="thumb1" />
+							<img src="product-images/t-shirt-black-front.jpg" class="sub__image" id="thumb2"/>
+							<img src="product-images/t-shirt-black-back.jpg" class="sub__image" id="thumb3"/>
+						</div>
+					</div>
+					<div class="form__inputs">
+						<div class="form__input__section">
+							<p>Price: <span id="displayPrice"></span></p>
+							<div class="form__input">
+								<label for="quantity">Quantity</label>
+								<input type="number" name="quantity" id="quantity" min="1" value="1" />
+							</div>
+							<p>Total: <span id="displayTotal"></span></p>
+						</div>
+						<div class="form__input__section">
+							<p>Color: <span></span></p>
+							<div class="form__input">
+								<input type="radio" name="color" id="black" value="black" checked />
+								<label for="color">Black</label>
+							</div>
+							<div class="form__input">
+								<input type="radio" name="color" id="red" value="red" />
+								<label for="color">Red</label>
+							</div>
+							<div class="form__input">
+								<input type="radio" name="color" id="grey" value="grey" />
+								<label for="color">Grey</label>
+							</div>
+						</div>
+						<div class="form__input__section">
+							<p>Size: <span></span></p>
+							<div class="form__input">
+								<input type="radio" name="size" id="small" value="small" />
+								<label for="size">Small S</label>
+							</div>
+							<div class="form__input">
+								<input type="radio" name="size" id="medium" value="medium" />
+								<label for="size">Medium M</label>
+							</div>
+							<div class="form__input">
+								<input type="radio" name="size" id="large" value="large" />
+								<label for="size">Large L</label>
+							</div>
+							<div class="form__input">
+								<input type="radio" name="size" id="x-large" value="x-large" />
+								<label for="size">X-Large XL</label>
+							</div>
+						</div>
+						<div class="form__input__section">
+							<button disabled>Choose A Size</button>
+						</div>
+					</div>
+				</form>
+			</section>
+		</main>
+	</body>
+</html>

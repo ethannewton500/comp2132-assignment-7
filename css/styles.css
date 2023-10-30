@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Robotor';
+  src: url('../fonts/Roboto');
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: blue;
+  font-family: rob;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+
+.store__form {
+  display: flex;
+  width: 650px;
+  background-color: green;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.form__images {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.main__image {
+  width: 350px;
+  height: fit-content;
+}
+
+.sub__images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 350px;
+  box-sizing: border-box;
+}
+
+.sub__image {
+  width: 100px;
+  height: fit-content;
+  margin-top: 25px;
+}
+
+.form__inputs {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#quantity {
+  width: 100%;
+}
+
+.form__input__section {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  padding: 10px
+}
+
+.form__input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
