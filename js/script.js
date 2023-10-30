@@ -23,7 +23,9 @@ function calculateTotal( event ) {
 
   if (quantity >= 1) {
     displayTotal.text(total + '.00');
-    submitButton.prop('disabled', false);
+    if (sizeSelected) {
+      submitButton.prop('disabled', false);
+    };
   } else {
     displayTotal.text('n o p e');
     submitButton.prop('disabled', true);
@@ -107,6 +109,8 @@ const displaySize = $('#displaySize');
 
 const submitButton = $('#submit');
 
+const sizeSelected = false
+
 function changeSize(event) {
   const selectedSize = $(this).val();
 
@@ -117,6 +121,8 @@ function changeSize(event) {
   }
 
   submitButton.text('Add to Cart');
+
+  sizeSelected = true;
 }
 
 sizeRadios.on('change', changeSize);
