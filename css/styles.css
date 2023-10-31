@@ -7,17 +7,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
-
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   background: linear-gradient(
     #4d4773, black);
+  background-attachment: fixed;
 }
 
 header {
@@ -35,6 +35,13 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 40px auto;
+}
+
+footer {
+  color: white;
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
 }
 
 .store__form {
@@ -76,6 +83,8 @@ main {
   width: 100px;
   height: fit-content;
   margin-top: 25px;
+  border-bottom: 4px solid #4d4773;
+  padding: 10px 0;
 }
 
 .form__inputs {
@@ -87,6 +96,8 @@ main {
 
 #quantity {
   width: 100%;
+  border: 2px solid #4d4773;
+
 }
 
 .form__input__section {
@@ -125,4 +136,92 @@ main {
 #submit {
   height: 100%;
   width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .store__form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form__images {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .sub__images {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sub__image {
+    width: 100px;
+    height: fit-content;
+    margin-top: 25px;
+    border-bottom: 4px solid #4d4773;
+    padding: 10px 0;
+  }
+
+  .form__inputs {
+    width: 100%;
+    height: 100%;
+  }
+
+  .form__input__section {
+    width: 100%;
+    flex: 1;
+  }
+
+  .form__input__section__small {
+    width: 100%;
+    flex: 0.3;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .store__form {
+    width: 300px;
+  }
+
+  .form__images {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main__image {
+    width: 250px;
+    height: fit-content;
+  }
+
+  .sub__images {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sub__image {
+    width: 75px;
+    height: fit-content;
+    margin-top: 25px;
+    border-bottom: 4px solid #4d4773;
+    padding: 10px 0;
+  }
+
+  .form__inputs {
+    width: 100%;
+    height: 100%;
+  }
+
+  .form__input__section {
+    width: 100%;
+    flex: 1;
+  }
+
+  .form__input__section__small {
+    width: 100%;
+    flex: 0.3;
+  }
 }

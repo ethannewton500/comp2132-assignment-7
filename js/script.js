@@ -109,7 +109,7 @@ const displaySize = $('#displaySize');
 
 const submitButton = $('#submit');
 
-const sizeSelected = false
+const sizeSelected = false;
 
 function changeSize(event) {
   const selectedSize = $(this).val();
